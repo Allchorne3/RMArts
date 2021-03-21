@@ -35,6 +35,21 @@ $(function(){
     });
 
     // Mobile Filter Accordion
+
     
+    const accordionButton = document.querySelector('.accordion-button');
+
+    accordionButton.addEventListener('click', function(){
+        const accordionContent = accordionButton.nextElementSibling;
+        
+        accordionButton.classList.toggle('accordion-button-active');
+        
+        if(accordionButton.classList.contains('accordion-button-active')) {
+            accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+        } else {
+            accordionContent.style.maxHeight = 0;
+        }
+        
+    });    
     
 })
