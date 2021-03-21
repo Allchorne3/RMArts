@@ -202,6 +202,11 @@ nav ul li:not(:last-child) {
 .gallery .i .filters {
   margin-bottom: 50px;
 }
+@media screen and (max-width: 599px) {
+  .gallery .i .filters {
+    display: none;
+  }
+}
 .gallery .i .filters ul {
   display: flex;
   flex-wrap: wrap;
