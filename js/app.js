@@ -33,5 +33,8 @@ $(function(){
         itemsMobile : false
    
     });
+
+    // Mobile Filter Accordion
+    
     
 })
