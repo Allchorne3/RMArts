@@ -1,18 +1,9 @@
 @use '../abstracts' as *;
 
 footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
     padding: $spacing-larger;
-    margin-top: $spacing-huge;
     background-color: $blueish-black;
 
-    @include responsive(tabletsmall) {
-        position: relative;
-    }
 
     .i {
         display: flex;
@@ -44,6 +35,11 @@ footer {
                     text-decoration: none;
                     font-family: $ff-main;
                     color: $grey;
+                    transition: all .3s ease-in-out;
+
+                    &:hover {
+                        color: $antique-white;
+                    }
                 }
             }
 

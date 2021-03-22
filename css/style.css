@@ -30,15 +30,9 @@ html {
 }
 
 body {
-  margin-bottom: 313px;
   position: relative;
   z-index: 99;
   background: #FAFAFA;
-}
-@media screen and (max-width: 799px) {
-  body {
-    margin-bottom: 0;
-  }
 }
 
 main {
@@ -360,19 +354,8 @@ nav ul li:not(:last-child) {
 }
 
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: -1;
   padding: 60px;
-  margin-top: 120px;
   background-color: #1D2629;
-}
-@media screen and (max-width: 799px) {
-  footer {
-    position: relative;
-  }
 }
 footer .i {
   display: flex;
@@ -403,6 +386,10 @@ footer .i .sitemap li a {
   text-decoration: none;
   font-family: "Poppins";
   color: #8E9394;
+  transition: all 0.3s ease-in-out;
+}
+footer .i .sitemap li a:hover {
+  color: #FAFAFA;
 }
 @media screen and (max-width: 799px) {
   footer .i .sitemap {

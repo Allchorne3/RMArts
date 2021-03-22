@@ -2,10 +2,10 @@ $(function(){
     $('.list').on("click", function(){
         const value = $(this).attr('data-filter');
         if (value == 'all') {
-            $('.itemBox').show(250);
+            $('.itemBox').css("display", "block");
         } else {
-            $('.itemBox').not('.'+value).hide(250).removeClass("appear");
-            $('.itemBox').filter('.'+value).show(250).addClass("appear");
+            $('.itemBox').not('.'+value).css("display", "none");
+            $('.itemBox').filter('.'+value).css("display", "block");
         }
     })
 

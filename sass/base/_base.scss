@@ -5,14 +5,9 @@ html {
 }
 
 body {
-    margin-bottom: 313px;
     position: relative;
     z-index: 99;
     background: $antique-white;
-
-    @include responsive(tabletsmall) {
-        margin-bottom: 0;
-    }
 }
 
 main {
