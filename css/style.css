@@ -221,8 +221,8 @@ nav ul li:not(:last-child) {
 }
 @media screen and (max-width: 599px) {
   .owl-dots .owl-dot span {
-    width: 8px !important;
-    height: 8px !important;
+    width: 9px !important;
+    height: 9px !important;
   }
 }
 
