@@ -1,0 +1,46 @@
+@use '../base' as b;
+@use '../abstracts' as *;
+
+.logo {
+    text-decoration: none;
+    font-family: $ff-main;
+    font-weight: $fw-bold;
+    font-size: 20px;
+    color: $antique-white;
+    // text-transform: uppercase;
+
+    span {
+        color: $blue;
+    }
+}
+
+nav {
+
+    @include responsive(mobile) {
+        display: none;
+    }
+
+    ul {
+        display: flex;
+
+        li {
+            list-style: none;
+            
+            a {
+                text-decoration: none;
+                font-family: $ff-main;
+                font-weight: $fw-bold;
+                font-size: 14px;
+                color: $antique-white;
+            }
+
+            a.active {
+                color: $blue;
+            }
+
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+        }
+    }
+}

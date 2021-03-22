@@ -1,0 +1,20 @@
+@use '../abstracts' as *;
+
+header {
+    background: $black-light;
+    @include responsive(mobile) {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+    }
+
+    .i {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        border-bottom: solid 1px rgba(0,0,0,.05);
+        padding: 20px;
+        
+    }
+}
