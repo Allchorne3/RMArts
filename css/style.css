@@ -140,6 +140,7 @@ main {
 }
 
 .btt-btn {
+  display: none;
   position: fixed;
   bottom: -70px;
   right: 30px;
@@ -153,6 +154,11 @@ main {
   border-radius: 50%;
   box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+@media screen and (max-width: 799px) {
+  .btt-btn {
+    display: block;
+  }
 }
 
 .fa-chevron-up {
@@ -318,6 +324,7 @@ nav ul li:not(:last-child) {
   padding: 10px 20px;
   font-family: "Poppins";
   font-size: 20px;
+  transition: all 0.2s ease-in-out;
 }
 @media screen and (max-width: 999px) {
   .gallery .i .filters ul .list {
@@ -328,6 +335,10 @@ nav ul li:not(:last-child) {
 }
 .gallery .i .filters ul .list:not(:last-child) {
   margin-right: 15px;
+}
+.gallery .i .filters ul .list:hover {
+  background: #52bef6;
+  color: #FAFAFA;
 }
 .gallery .i .filters ul .list.active {
   background: linear-gradient(142deg, #22acf3 0%, #34b2f3 37%, #9693f7 100%);

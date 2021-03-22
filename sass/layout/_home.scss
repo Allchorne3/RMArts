@@ -34,7 +34,9 @@
                     padding: 10px 20px;
                     font-family: $ff-main;
                     font-size: 20px;
+                    transition: all .2s ease-in-out;
                     
+
                     @include responsive(tablet) {
                         font-size: 15px;
                         padding: 5px 10px;
@@ -43,6 +45,11 @@
 
                     &:not(:last-child) {
                         margin-right: 15px;
+                    }
+
+                    &:hover {
+                        background: lighten($blue, 10%);
+                        color: $antique-white;
                     }
 
                     &.active {
