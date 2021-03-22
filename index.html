@@ -7,6 +7,7 @@
     <title>SASS (SCSS) Start Project</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <link rel="stylesheet" href="node_modules/lightbox2/dist/css/lightbox.css"/>
 
     <link rel="stylesheet" href="css/style.css">
@@ -25,7 +26,9 @@
         </div>
     </header>
 
-    <main>
+    <a href="#top" class="btt-btn"><i class="fas fa-chevron-up"></i></a>
+
+    <main id="top">
         <div id="owl-slider" class="owl-carousel owl-theme">
  
             <div class="item">
@@ -82,78 +85,12 @@
                             <li class="list" data-filter="seascapes">Seascapes</li>
                             <li class="list" data-filter="floral">Floral</li>
                             <li class="list" data-filter="buildings">Buildings</li>
-                            <li class="list active" data-filter="all">Remove Filter<span>x</span></li>
+                            <li class="list active" data-filter="all">Remove Filter<i class="fas fa-times-circle"></i></li>
                         </ul>
                     </div>
                 </div>
                 
                 <!-- Images -->
-                <!-- <div class="images">
-                    <a href="img/mobile1.jpg" data-lightbox="gallery" data-title="Caption Here" data-filter="mobile" href="img/mobile1.jpg" data-lightbox="gallery" data-title="Caption Here" class="itemBox mobile">
-                        <img src="img/mobile1.jpg" alt="Mobile">
-                    </a>
-                    <a href="img/camera1.jpg" data-lightbox="gallery" data-title="Caption Here" class="itemBox camera">
-                        <img src="img/camera1.jpg" alt="Camera">
-                    </a>
-                    <a href="img/watch1.jpg" data-lightbox="gallery" data-title="Caption Here" class="itemBox watch">
-                        <img src="img/watch1.jpg" alt="Watch">
-                    </a>
-                    <a href="img/shoe1.jpg" data-lightbox="gallery" data-title="Caption Here" class="itemBox shoe">
-                        <img src="img/shoe1.jpg" alt="Show">
-                    </a>
-                    <a href="img/headphone1.jpg" data-lightbox="gallery" data-title="Caption Here" class="itemBox headphone">
-                        <img src="img/headphone1.jpg" alt="Headphones">
-                    </a>
-
-                    <a href="img/mobile2.jpg" data-lightbox="gallery" data-title="Caption Here" data-filter="mobile" class="itemBox mobile">
-                        <img src="img/mobile2.jpg" alt="Mobile">
-                    </a>
-                    <a href="img/camera2.jpg" data-lightbox="gallery" data-title="Caption Here" class="itemBox camera">
-                        <img src="img/camera2.jpg" alt="Camera">
-                    </a>
-                    <a href="img/watch2.jpg" data-lightbox="gallery" data-title="Caption Here" class="itemBox watch">
-                        <img src="img/watch2.jpg" alt="Watch">
-                    </a>
-                    <a href="img/shoe2.jpg" data-lightbox="gallery" data-title="Caption Here" class="itemBox shoe">
-                        <img src="img/shoe2.jpg" alt="Show">
-                    </a>
-                    <a href="img/headphone2.jpg" data-lightbox="gallery" data-title="Caption Here" class="itemBox headphone">
-                        <img src="img/headphone2.jpg" alt="Headphones">
-                    </a>
-
-                    <a href="img/mobile3.jpg" data-lightbox="gallery" data-title="Caption Here" data-filter="mobile" class="itemBox mobile">
-                        <img src="img/mobile3.jpg" alt="Mobile">
-                    </a>
-                    <a href="img/camera3.jpg" data-lightbox="gallery" data-title="Caption Here" class="itemBox camera">
-                        <img src="img/camera3.jpg" alt="Camera">
-                    </a>
-                    <a href="img/watch3.jpg" data-lightbox="gallery" data-title="Caption Here" class="itemBox watch">
-                        <img src="img/watch3.jpg" alt="Watch">
-                    </a>
-                    <a href="img/shoe3.jpg" data-lightbox="gallery" data-title="Caption Here" class="itemBox shoe">
-                        <img src="img/shoe3.jpg" alt="Show">
-                    </a>
-                    <a href="img/headphone3.jpg" data-lightbox="gallery" data-title="Caption Here" class="itemBox headphone">
-                        <img src="img/headphone3.jpg" alt="Headphones">
-                    </a>
-
-                    <a href="img/mobile4.jpg" data-lightbox="gallery" data-title="Caption Here" data-filter="mobile" class="itemBox mobile">
-                        <img src="img/mobile4.jpg" alt="Mobile">
-                    </a>
-                    <a href="img/watch4.jpg" data-lightbox="gallery" data-title="Caption Here" class="itemBox watch">
-                        <img src="img/watch4.jpg" alt="Watch">
-                    </a>
-                    <a href="img/shoe4.jpg" data-lightbox="gallery" data-title="Caption Here" class="itemBox shoe">
-                        <img src="img/shoe4.jpg" alt="Show">
-                    </a>
-                    <a href="img/headphone4.jpg" data-lightbox="gallery" data-title="Caption Here" class="itemBox headphone">
-                        <img src="img/headphone4.jpg" alt="Headphones">
-                    </a>
-
-                    <a href="img/mobile5.jpg" data-lightbox="gallery" data-title="Caption Here" data-filter="mobile" class="itemBox mobile">
-                        <img src="img/mobile5.jpg" alt="Mobile">
-                    </a>
-                </div> -->
                 <div class="images">
                     <a href="img/thumbs/6-thumb.jpg" data-lightbox="waterfalls" data-title="Caption Here" class="itemBox waterfalls">
                         <img src="img/thumbs/6-thumb.jpg" alt="Mobile">

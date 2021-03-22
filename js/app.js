@@ -51,5 +51,19 @@ $(function(){
         }
         
     });    
+
+    // Back To Top
+    //Header transparency on scroll
+    $(window).scroll(function(){
+        var wScroll = $(this).scrollTop()
+
+       
+        if(wScroll > ($('main').height() / 3)) {
+        $('.btt-btn').css("bottom", "50px")
+        } else {
+        $('.btt-btn').css("bottom", "-70px")
+        }
+    })
+  
     
 })

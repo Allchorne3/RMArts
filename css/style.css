@@ -25,11 +25,20 @@ h6 {
   margin-bottom: 20px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin-bottom: 313px;
   position: relative;
   z-index: 99;
   background: #FAFAFA;
+}
+@media screen and (max-width: 799px) {
+  body {
+    margin-bottom: 0;
+  }
 }
 
 main {
@@ -60,7 +69,13 @@ main {
 }
 
 .filter-accordion {
+  display: none;
   margin-bottom: 50px;
+}
+@media screen and (max-width: 599px) {
+  .filter-accordion {
+    display: block;
+  }
 }
 .filter-accordion .accordion-button {
   display: block;
@@ -75,16 +90,16 @@ main {
   transition: background 0.2s ease-in-out;
   position: relative;
   font-size: 16px;
-  border-bottom: solid 1px rgba(0, 0, 0, 0.3);
-  border-top: solid 1px rgba(0, 0, 0, 0.3);
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  border-top: solid 1px rgba(0, 0, 0, 0.1);
 }
 .filter-accordion .accordion-button::after {
   content: "▴";
-  transform: scale(1.5);
+  transform: scale(1.5) translateX(200%);
   font-size: 17px;
   position: absolute;
   top: 14px;
-  right: 170px;
+  right: 50%;
 }
 .filter-accordion .accordion-button-active {
   background: linear-gradient(142deg, #22acf3 0%, #34b2f3 37%, #9693f7 100%);
@@ -117,21 +132,10 @@ main {
   font-weight: 700;
   text-transform: uppercase;
   position: relative;
-  margin-left: -30px;
   background: #333333;
 }
-.filter-accordion .accordion-content li:last-child span {
-  position: absolute;
-  top: 26%;
-  right: 32%;
-  border: solid 2px #FAFAFA;
-  width: 20px;
-  height: 20px;
-  font-size: 15px;
-  line-height: 10px;
-  border-radius: 50%;
-  padding: 2px;
-  text-transform: lowercase;
+.filter-accordion .accordion-content li:last-child i.fa-times-circle {
+  margin-left: 10px;
 }
 .filter-accordion .accordion-content li:last-child.active {
   background: #333333;
@@ -141,8 +145,35 @@ main {
   overflow: visible !important;
 }
 
+.btt-btn {
+  position: fixed;
+  bottom: -70px;
+  right: 30px;
+  z-index: 999;
+  width: 60px;
+  height: 60px;
+  background: #0c91d6;
+  line-height: 65px;
+  text-align: center;
+  color: #FAFAFA;
+  border-radius: 50%;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.fa-chevron-up {
+  font-size: 30px;
+}
+
 header {
   background: #333333;
+}
+@media screen and (max-width: 599px) {
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
 }
 header .i {
   display: flex;
@@ -164,6 +195,11 @@ header .i {
   color: #22ACF3;
 }
 
+@media screen and (max-width: 599px) {
+  nav {
+    display: none;
+  }
+}
 nav ul {
   display: flex;
 }
@@ -202,7 +238,7 @@ nav ul li:not(:last-child) {
 }
 @media screen and (max-width: 599px) {
   .owl-dots {
-    bottom: 10px;
+    bottom: 0px;
   }
 }
 .owl-dots .owl-dot.active span {
@@ -257,6 +293,11 @@ nav ul li:not(:last-child) {
 
 .gallery {
   padding-bottom: 120px;
+}
+@media screen and (max-width: 799px) {
+  .gallery {
+    padding-bottom: 0;
+  }
 }
 .gallery .i .filters {
   margin-bottom: 50px;
@@ -328,9 +369,21 @@ footer {
   margin-top: 120px;
   background-color: #1D2629;
 }
+@media screen and (max-width: 799px) {
+  footer {
+    position: relative;
+  }
+}
 footer .i {
   display: flex;
   justify-content: space-between;
+}
+@media screen and (max-width: 799px) {
+  footer .i {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 footer .i h6 {
   font-family: "Poppins";
@@ -350,6 +403,11 @@ footer .i .sitemap li a {
   text-decoration: none;
   font-family: "Poppins";
   color: #8E9394;
+}
+@media screen and (max-width: 799px) {
+  footer .i .sitemap {
+    margin-top: 50px;
+  }
 }
 
 .spacer {
