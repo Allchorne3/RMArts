@@ -21,6 +21,12 @@ main {
     margin-right: auto;
 }
 
+.ismall {
+    max-width: $maxWidthSmall;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 * {
     font-family: $ff-main;
 }

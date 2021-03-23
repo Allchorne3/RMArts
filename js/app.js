@@ -34,8 +34,22 @@ $(function(){
    
     });
 
-    // Mobile Filter Accordion
 
+    // Desktop Filter(s)
+    const filterToggle = $('.filter-toggle span');
+    const filters = $('.filters');
+
+    filterToggle.on('click', function(){
+        filters.toggleClass('active');
+
+        if(filters.hasClass('active')) {
+            filterToggle.text("Filters -")
+        } else {
+            filterToggle.text("Filters +")
+        }
+    })
+
+    // Mobile Filter Accordion
     
     const accordionButton = document.querySelector('.accordion-button');
 
