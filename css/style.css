@@ -84,7 +84,7 @@ main {
   transition: background 0.2s ease-in-out;
   position: relative;
   font-size: 16px;
-  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  border-bottom: solid 1px black;
   border-top: solid 1px rgba(0, 0, 0, 0.1);
 }
 .filter-accordion .accordion-button::after {
