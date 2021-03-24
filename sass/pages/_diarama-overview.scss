@@ -1,0 +1,81 @@
+@use '../abstracts' as *;
+// images flex container has been set in _home.scss
+
+.diaramas {
+
+    .gallery {
+
+        @include responsive(mobile) {
+            padding-bottom: 0;
+        }
+        
+        .images {
+            @include responsive(mobile) {
+                margin: $spacing-large 0 0;
+            }
+            
+            a {
+                max-width: 48%;
+                margin: 2.5px;
+                position: relative;
+                overflow: hidden;
+
+                @include responsive(tablet) {
+                    // margin: 0 $spacing-medium $spacing-medium;
+                    max-width: 100%;
+                }
+
+                @include responsive(mobile) {
+                    margin: 0
+                }
+                
+                img {
+                    max-width: 100%;
+                    display: block;
+                }
+
+                .diarama-info {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: -70px;
+                    height: 70px;
+                    padding: 0 30px;
+                    background: rgba($black-light,.95);
+                    display: flex;
+                    align-items: center;
+                    transition: all .2s ease-in-out;
+                    display: flex;
+                    justify-content: space-between;
+
+                    @include responsive(tablet) {
+                        bottom: 0;
+                    }
+
+                    h3 {
+                        font-weight: $fw-bold;
+                        color: white;
+                        font-size: 20px;
+                        line-height: 20px;
+                    }
+
+                    i.fas {
+                        color: $antique-white;
+                        
+                    }
+
+                }
+
+                &:hover {
+                    .diarama-info {
+                        bottom: 0;
+                    }
+                }
+
+            }
+
+        }
+
+    }
+
+}

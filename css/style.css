@@ -344,15 +344,54 @@ nav ul li:not(:last-child) {
   background: #333333;
 }
 
+footer {
+  padding: 60px;
+  background-color: #1D2629;
+}
+footer .i {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 799px) {
+  footer .i {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+footer .i h6 {
+  font-family: "Poppins";
+  font-size: 15px;
+  color: #FAFAFA;
+}
+footer .i .about {
+  max-width: 550px;
+}
+footer .i .about p {
+  color: #8E9394;
+}
+footer .i .sitemap li {
+  list-style: none;
+}
+footer .i .sitemap li a {
+  text-decoration: none;
+  font-family: "Poppins";
+  color: #8E9394;
+  transition: all 0.3s ease-in-out;
+}
+footer .i .sitemap li a:hover {
+  color: #FAFAFA;
+}
+@media screen and (max-width: 799px) {
+  footer .i .sitemap {
+    margin-top: 50px;
+  }
+}
+
 .gallery {
   padding-bottom: 120px;
 }
-@media screen and (max-width: 799px) {
-  .gallery {
-    padding-bottom: 0;
-  }
-}
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .gallery .i .ismall {
     margin-left: 50px;
     margin-right: 50px;
@@ -413,7 +452,7 @@ nav ul li:not(:last-child) {
   font-size: 17px;
   transition: all 0.2s ease-in-out;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .gallery .i .ismall .filters ul .list {
     font-size: 15px;
     padding: 5px 10px;
@@ -452,48 +491,66 @@ nav ul li:not(:last-child) {
   object-fit: cover;
 }
 
-footer {
-  padding: 60px;
-  background-color: #1D2629;
+@media screen and (max-width: 599px) {
+  .diaramas .gallery {
+    padding-bottom: 0;
+  }
 }
-footer .i {
+@media screen and (max-width: 599px) {
+  .diaramas .gallery .images {
+    margin: 50px 0 0;
+  }
+}
+.diaramas .gallery .images a {
+  max-width: 48%;
+  margin: 2.5px;
+  position: relative;
+  overflow: hidden;
+}
+@media screen and (max-width: 999px) {
+  .diaramas .gallery .images a {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 599px) {
+  .diaramas .gallery .images a {
+    margin: 0;
+  }
+}
+.diaramas .gallery .images a img {
+  max-width: 100%;
+  display: block;
+}
+.diaramas .gallery .images a .diarama-info {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -70px;
+  height: 70px;
+  padding: 0 30px;
+  background: rgba(51, 51, 51, 0.95);
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
   display: flex;
   justify-content: space-between;
 }
-@media screen and (max-width: 799px) {
-  footer .i {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+@media screen and (max-width: 999px) {
+  .diaramas .gallery .images a .diarama-info {
+    bottom: 0;
   }
 }
-footer .i h6 {
-  font-family: "Poppins";
-  font-size: 15px;
+.diaramas .gallery .images a .diarama-info h3 {
+  font-weight: 700;
+  color: white;
+  font-size: 20px;
+  line-height: 20px;
+}
+.diaramas .gallery .images a .diarama-info i.fas {
   color: #FAFAFA;
 }
-footer .i .about {
-  max-width: 550px;
-}
-footer .i .about p {
-  color: #8E9394;
-}
-footer .i .sitemap li {
-  list-style: none;
-}
-footer .i .sitemap li a {
-  text-decoration: none;
-  font-family: "Poppins";
-  color: #8E9394;
-  transition: all 0.3s ease-in-out;
-}
-footer .i .sitemap li a:hover {
-  color: #FAFAFA;
-}
-@media screen and (max-width: 799px) {
-  footer .i .sitemap {
-    margin-top: 50px;
-  }
+.diaramas .gallery .images a:hover .diarama-info {
+  bottom: 0;
 }
 
 .spacer {

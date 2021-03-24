@@ -1,7 +1,8 @@
 @use 'sass:map';
 
 $breakpoints: (
-    desktop: 1200px,
+    desktoplarge: 1399px,
+    desktop: 1199px,
     tablet: 999px,
     tabletsmall: 799px,
     mobile: 599px

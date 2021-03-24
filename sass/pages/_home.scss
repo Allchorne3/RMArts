@@ -3,10 +3,6 @@
 
     padding-bottom: $spacing-huge;
 
-    @include responsive(tabletsmall) {
-        padding-bottom: 0;
-    }
-
     .i {
 
         .ismall {
