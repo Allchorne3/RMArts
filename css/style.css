@@ -64,6 +64,10 @@ main {
   margin-right: auto;
 }
 
+img {
+  max-width: 100%;
+}
+
 * {
   font-family: "Poppins";
 }
@@ -234,11 +238,6 @@ header .i .logo span {
   color: #22ACF3;
 }
 
-@media screen and (max-width: 599px) {
-  nav {
-    display: none;
-  }
-}
 nav ul {
   display: flex;
 }
@@ -491,66 +490,203 @@ footer .i .sitemap li a:hover {
   object-fit: cover;
 }
 
-@media screen and (max-width: 599px) {
-  .diaramas .gallery {
-    padding-bottom: 0;
-  }
-}
-@media screen and (max-width: 599px) {
-  .diaramas .gallery .images {
-    margin: 50px 0 0;
-  }
-}
-.diaramas .gallery .images a {
+.diaramas .gallery .images figure {
   max-width: 48%;
   margin: 2.5px;
   position: relative;
   overflow: hidden;
 }
 @media screen and (max-width: 999px) {
-  .diaramas .gallery .images a {
+  .diaramas .gallery .images figure {
+    margin: 0 10px 10px;
     max-width: 100%;
   }
 }
-@media screen and (max-width: 599px) {
-  .diaramas .gallery .images a {
-    margin: 0;
-  }
-}
-.diaramas .gallery .images a img {
-  max-width: 100%;
+.diaramas .gallery .images figure img {
   display: block;
 }
-.diaramas .gallery .images a .diarama-info {
+.diaramas .gallery .images figure.overview-imgs figcaption::before {
   position: absolute;
+  top: 0;
   left: 0;
-  right: 0;
-  bottom: -70px;
-  height: 70px;
-  padding: 0 30px;
-  background: rgba(51, 51, 51, 0.95);
-  display: flex;
-  align-items: center;
-  transition: all 0.2s ease-in-out;
-  display: flex;
-  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(72, 76, 97, 0) 0%, #484c61 75%);
+  content: "";
+  opacity: 0;
+  transform: translate3d(0, 50%, 0);
+  transition: opacity 0.35s, transform 0.35s;
 }
-@media screen and (max-width: 999px) {
-  .diaramas .gallery .images a .diarama-info {
-    bottom: 0;
+@media screen and (max-width: 799px) {
+  .diaramas .gallery .images figure.overview-imgs figcaption::before {
+    opacity: 1 !important;
   }
 }
-.diaramas .gallery .images a .diarama-info h3 {
-  font-weight: 700;
-  color: white;
-  font-size: 20px;
-  line-height: 20px;
-}
-.diaramas .gallery .images a .diarama-info i.fas {
+.diaramas .gallery .images figure.overview-imgs h3 {
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  width: 100%;
+  color: #484c61;
   color: #FAFAFA;
+  transition: transform 0.35s, color 0.35s;
+  transform: translate3d(0, -50%, 0);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 30px;
 }
-.diaramas .gallery .images a:hover .diarama-info {
+@media screen and (max-width: 799px) {
+  .diaramas .gallery .images figure.overview-imgs h3 {
+    color: #fff;
+    transform: translate3d(0, -50%, 0) translate3d(0, -20px, 0);
+  }
+}
+@media screen and (max-width: 599px) {
+  .diaramas .gallery .images figure.overview-imgs h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+}
+.diaramas .gallery .images figure.overview-imgs p {
+  position: absolute;
   bottom: 0;
+  left: 0;
+  padding: 2em;
+  width: 100%;
+  opacity: 0;
+  color: #FAFAFA;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  transform: translate3d(0, 10px, 0);
+  transition: opacity 0.35s, transform 0.35s;
+}
+@media screen and (max-width: 799px) {
+  .diaramas .gallery .images figure.overview-imgs p {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@media screen and (max-width: 599px) {
+  .diaramas .gallery .images figure.overview-imgs p {
+    font-weight: 300;
+    font-size: 14px;
+  }
+}
+.diaramas .gallery .images figure.overview-imgs a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.diaramas .gallery .images figure.overview-imgs:hover h3 {
+  color: #fff;
+  transform: translate3d(0, -50%, 0) translate3d(0, -20px, 0);
+}
+.diaramas .gallery .images figure.overview-imgs:hover figcaption::before, .diaramas .gallery .images figure.overview-imgs:hover p {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.diarama-hero {
+  width: 100%;
+  height: 100%;
+  height: 500px;
+  background-color: #1D2629;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
+.diarama-hero .hero-info {
+  max-width: 960px;
+  color: #FAFAFA;
+  text-align: center;
+}
+.diarama-hero .hero-info h3 {
+  font-size: 60px;
+  line-height: 35px;
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+
+.diarama-artwork {
+  margin: 0 50px;
+}
+@media screen and (max-width: 599px) {
+  .diarama-artwork {
+    margin: 0 10px;
+  }
+}
+.diarama-artwork img {
+  display: block;
+  margin-top: 50px;
+}
+.diarama-artwork img:not(:last-of-type) {
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 599px) {
+  .diarama-artwork img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.diarama-links {
+  display: flex;
+  justify-content: space-between;
+  margin: 120px 0 50px;
+}
+.diarama-links .diarama-link {
+  display: flex;
+  justify-content: space-between;
+  place-items: center;
+  padding: 5px 0 10px;
+  position: relative;
+  color: #333333;
+  text-decoration: none;
+}
+.diarama-links .diarama-link:before {
+  position: absolute;
+  content: "";
+  bottom: 3px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #e1e3df;
+}
+.diarama-links .diarama-link:after {
+  position: absolute;
+  content: "";
+  bottom: 3px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(142deg, #22acf3 0%, #34b2f3 37%, #9693f7 100%);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.68, 0.06);
+}
+.diarama-links .diarama-link:first-child i.fas {
+  margin-right: 50px;
+}
+.diarama-links .diarama-link:first-child:after {
+  background: linear-gradient(142deg, #22acf3 0%, #34b2f3 37%, #9693f7 100%);
+  transform-origin: right;
+}
+.diarama-links .diarama-link:nth-child(2) i.fas {
+  margin-left: 50px;
+}
+.diarama-links .diarama-link:nth-child(2):after {
+  background: #F7CF20;
+  transform-origin: left;
+}
+.diarama-links .diarama-link:hover {
+  cursor: pointer;
+}
+.diarama-links .diarama-link:hover:after {
+  transform: scaleX(1);
 }
 
 .spacer {

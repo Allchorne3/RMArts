@@ -27,6 +27,10 @@ main {
     margin-right: auto;
 }
 
+img {
+    max-width: 100%;
+}
+
 * {
     font-family: $ff-main;
 }
