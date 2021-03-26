@@ -6,7 +6,7 @@
     .gallery {
         
         @include responsive(mobile) {
-            padding-bottom: $spacing-small;
+            padding-bottom: 0;
     
         }
 

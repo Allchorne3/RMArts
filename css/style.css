@@ -492,7 +492,7 @@ footer .i .sitemap li a:hover {
 
 @media screen and (max-width: 599px) {
   .diaramas .gallery {
-    padding-bottom: 10px;
+    padding-bottom: 0;
   }
 }
 @media screen and (max-width: 599px) {
