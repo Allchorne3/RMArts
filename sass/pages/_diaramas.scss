@@ -107,13 +107,7 @@
 .diarama-links {
     display: flex;
     justify-content: space-between;
-    margin: $spacing-huge 0 $spacing-large;
-    
-    @include responsive(mobile) {
-        flex-direction: column;
-        align-items: center;
-        margin: $spacing-large 0 $spacing-large;
-    }
+    margin: $spacing-huge $spacing-medium $spacing-large;
 
     .diarama-link {
         display: flex;
@@ -125,7 +119,11 @@
         text-decoration: none;
 
         @include responsive(mobile) {
-            width: 210px;
+            width: 130px;
+        }
+
+        @include responsive(mobiletiny) {
+            width: 100px;
         }
         
 
@@ -153,12 +151,18 @@
         }
 
         &:first-child {
-            @include responsive(mobile) {
-                margin-bottom: $spacing-medium;
+
+            @include responsive(mobiletiny) {
+                width: 80px;
             }
+
             i.fas {
                 margin-right: 50px;
+                @include responsive(mobiletiny) {
+                    margin-right: 10px;
+                }
             }
+
             &:after {
                 background: $bp-gradient;
                 transform-origin: right;
@@ -169,6 +173,9 @@
         &:nth-child(2) {
             i.fas {
                 margin-left: 50px;
+                @include responsive(mobiletiny) {
+                    margin-left: 0;
+                }
             }
             
             &:after {

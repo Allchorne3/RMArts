@@ -81,6 +81,7 @@
         overflow: hidden;
         max-height: 0;
         transition: max-height 0.3s cubic-bezier(.57,.01,.94,.46);
+        
 
         &-active {
             max-height: 100%!important;

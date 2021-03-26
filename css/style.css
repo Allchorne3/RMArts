@@ -713,14 +713,7 @@ footer .i .sitemap li a:hover {
 .diarama-links {
   display: flex;
   justify-content: space-between;
-  margin: 120px 0 50px;
-}
-@media screen and (max-width: 599px) {
-  .diarama-links {
-    flex-direction: column;
-    align-items: center;
-    margin: 50px 0 50px;
-  }
+  margin: 120px 20px 50px;
 }
 .diarama-links .diarama-link {
   display: flex;
@@ -733,7 +726,12 @@ footer .i .sitemap li a:hover {
 }
 @media screen and (max-width: 599px) {
   .diarama-links .diarama-link {
-    width: 210px;
+    width: 130px;
+  }
+}
+@media screen and (max-width: 399px) {
+  .diarama-links .diarama-link {
+    width: 100px;
   }
 }
 .diarama-links .diarama-link:before {
@@ -757,13 +755,18 @@ footer .i .sitemap li a:hover {
   transform-origin: right;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.68, 0.06);
 }
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 399px) {
   .diarama-links .diarama-link:first-child {
-    margin-bottom: 20px;
+    width: 80px;
   }
 }
 .diarama-links .diarama-link:first-child i.fas {
   margin-right: 50px;
+}
+@media screen and (max-width: 399px) {
+  .diarama-links .diarama-link:first-child i.fas {
+    margin-right: 10px;
+  }
 }
 .diarama-links .diarama-link:first-child:after {
   background: linear-gradient(142deg, #22acf3 0%, #34b2f3 37%, #9693f7 100%);
@@ -771,6 +774,11 @@ footer .i .sitemap li a:hover {
 }
 .diarama-links .diarama-link:nth-child(2) i.fas {
   margin-left: 50px;
+}
+@media screen and (max-width: 399px) {
+  .diarama-links .diarama-link:nth-child(2) i.fas {
+    margin-left: 0;
+  }
 }
 .diarama-links .diarama-link:nth-child(2):after {
   background: #F7CF20;

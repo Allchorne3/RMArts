@@ -51,20 +51,20 @@ $(function(){
 
     // Mobile Filter Accordion
     
-    const accordionButton = document.querySelector('.accordion-button');
+    // const accordionButton = document.querySelector('.accordion-button');
 
-    accordionButton.addEventListener('click', function(){
-        const accordionContent = accordionButton.nextElementSibling;
+    // accordionButton.addEventListener('click', function(){
+    //     const accordionContent = accordionButton.nextElementSibling;
         
-        accordionButton.classList.toggle('accordion-button-active');
+    //     accordionButton.classList.toggle('accordion-button-active');
         
-        if(accordionButton.classList.contains('accordion-button-active')) {
-            accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
-        } else {
-            accordionContent.style.maxHeight = 0;
-        }
+    //     if(accordionButton.classList.contains('accordion-button-active')) {
+    //         accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+    //     } else {
+    //         accordionContent.style.maxHeight = 0;
+    //     }
         
-    });    
+    // });    
 
     // Back To Top
     //Header transparency on scroll
@@ -78,6 +78,18 @@ $(function(){
         $('.btt-btn').css("bottom", "-70px")
         }
     })
-  
+
+    // Change Diarama Links Wording
+    const phone = window.matchMedia("(max-width: 599px)")
+    const back = $('.diarama-links .diarama-link h4.back');
+    const toJourney = $('.diarama-links .diarama-link h4.to-journey');
+    const toDiaramas = $('.diarama-links .diarama-link h4.to-diaramas');
+
+    if (phone.matches) {
+        back.text("Back");
+        toJourney.text("Journey");
+        toDiaramas.text("Diaramas");
+    }
+    
     
 })

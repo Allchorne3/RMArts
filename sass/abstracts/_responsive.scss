@@ -5,7 +5,8 @@ $breakpoints: (
     desktop: 1199px,
     tablet: 999px,
     tabletsmall: 799px,
-    mobile: 599px
+    mobile: 599px,
+    mobiletiny: 399px
 );
 
 @mixin responsive($key) {
