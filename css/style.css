@@ -490,6 +490,16 @@ footer .i .sitemap li a:hover {
   object-fit: cover;
 }
 
+@media screen and (max-width: 599px) {
+  .diaramas .gallery {
+    padding-bottom: 10px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .diaramas .gallery .images {
+    margin: 10px;
+  }
+}
 .diaramas .gallery .images figure {
   max-width: 48%;
   margin: 2.5px;
@@ -676,13 +686,13 @@ footer .i .sitemap li a:hover {
 .diarama-artwork img {
   display: block;
   margin-top: 50px;
+  margin-top: 10px;
 }
 .diarama-artwork img:not(:last-of-type) {
   margin-bottom: 50px;
 }
 @media screen and (max-width: 599px) {
-  .diarama-artwork img {
-    margin-top: 10px;
+  .diarama-artwork img:not(:last-of-type) {
     margin-bottom: 10px;
   }
 }

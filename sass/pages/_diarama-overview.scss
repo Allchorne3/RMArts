@@ -4,8 +4,17 @@
 .diaramas { //Page class
 
     .gallery {
+        
+        @include responsive(mobile) {
+            padding-bottom: $spacing-small;
+    
+        }
 
         .images {
+
+            @include responsive(mobile) {
+                margin: $spacing-small;
+            }
             
             figure {
                 max-width: 48%;

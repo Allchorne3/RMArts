@@ -87,12 +87,13 @@
 
         &:not(:last-of-type){
             margin-bottom: $spacing-large;
+            
+            @include responsive(mobile) {
+                margin-bottom: $spacing-small;
+            }
         }
+        margin-top: $spacing-small;
 
-        @include responsive(mobile) {
-            margin-top: $spacing-small;
-            margin-bottom: $spacing-small;
-        }
 
     }
 
