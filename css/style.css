@@ -683,6 +683,15 @@ footer .i .sitemap li a:hover {
   }
 }
 
+.diarama-showcase {
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 599px) {
+  .diarama-showcase {
+    margin-bottom: 0;
+  }
+}
+
 .diarama-artwork {
   margin: 0 50px;
 }

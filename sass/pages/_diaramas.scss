@@ -74,6 +74,13 @@
     }
 }
 
+.diarama-showcase {
+    margin-bottom: 30px;
+    @include responsive(mobile) {
+        margin-bottom: 0;
+    }
+}
+
 .diarama-artwork {
     margin: 0 $spacing-large;
 
