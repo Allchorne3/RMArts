@@ -114,6 +114,10 @@
                 height: 300px;
                 margin: 2px;
 
+                @include responsive(mobile) {
+                    margin-bottom: $spacing-medium;
+                }
+
                 img {
                     position: absolute;
                     top: 0;

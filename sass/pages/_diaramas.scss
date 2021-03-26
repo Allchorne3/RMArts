@@ -92,8 +92,13 @@
                 margin-bottom: $spacing-small;
             }
         }
+        @include responsive(mobile) {
+            &:first-child {
+                margin-top: $spacing-tiny;
+            }
+        }
         margin-top: $spacing-small;
-
+        
 
     }
 

@@ -23,7 +23,10 @@
                 overflow: hidden;
 
                 @include responsive(tablet) {
-                    margin: 0 $spacing-small $spacing-small;
+                    margin: 0 $spacing-small $spacing-medium;
+                    &:last-child {
+                        margin-bottom: $spacing-small;
+                    }
                     max-width: 100%;
                 }
                 

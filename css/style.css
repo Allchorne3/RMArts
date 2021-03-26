@@ -481,6 +481,11 @@ footer .i .sitemap li a:hover {
   height: 300px;
   margin: 2px;
 }
+@media screen and (max-width: 599px) {
+  .gallery .i .images .itemBox {
+    margin-bottom: 20px;
+  }
+}
 .gallery .i .images .itemBox img {
   position: absolute;
   top: 0;
@@ -508,8 +513,11 @@ footer .i .sitemap li a:hover {
 }
 @media screen and (max-width: 999px) {
   .diaramas .gallery .images figure {
-    margin: 0 10px 10px;
+    margin: 0 10px 20px;
     max-width: 100%;
+  }
+  .diaramas .gallery .images figure:last-child {
+    margin-bottom: 10px;
   }
 }
 .diaramas .gallery .images figure img {
@@ -694,6 +702,11 @@ footer .i .sitemap li a:hover {
 @media screen and (max-width: 599px) {
   .diarama-artwork img:not(:last-of-type) {
     margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .diarama-artwork img:first-child {
+    margin-top: 5px;
   }
 }
 
